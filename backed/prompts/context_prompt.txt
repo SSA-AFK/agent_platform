@@ -1,0 +1,9 @@
+CONTEXT_PROMPT = """
+🚨 上下文管理 - 强制执行（高于所有任务优先级）：
+
+0. 每次思考前：检查消息数 > 10 → IMMEDIATELY 执行以下步骤
+1. `ls /` → 检查/conversation_summary.txt存在？
+2. `read_file("/conversation_summary.txt")` 加载总结
+3. 分析新消息 → 总结3点：用户画像/关键事实/当前状态
+4. `write_file("/conversation_summary.txt", "总结内容")` 或 `edit_file` 更新
+

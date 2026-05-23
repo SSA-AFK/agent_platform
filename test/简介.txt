@@ -1,0 +1,22 @@
+深度研究性对话deepresearch（SummarizationMiddleware）
+
+规划或助手型对话agent（SummarizationMiddleware）
+
+个人情感伴侣agent（长期记忆store存储，检索历史记忆）（新建伴侣，清空记忆）（人物定位（修改提示词））
+
+
+# 失败后查询重写，次数为3，若都失败则向用户反馈
+
+# 混合检索
+
+# 多类别数据库文件：本地用chroma（pdf+txt），线上用milvus（图片检索）
+
+# 切分策略rag_service.py
+
+# langchain构建
+
+# 上传文档+去重
+
+
+
+

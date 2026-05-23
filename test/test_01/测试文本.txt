@@ -1,0 +1,22 @@
+
+    print("\n--- 步骤1: 用户发起退款 ---")
+    result1 = app.invoke(
+        {"messages": [HumanMessage(content="订单 ORD-456 退款")]},
+        config
+    )
+
+    if "__interrupt__" in result1:
+        interrupt_info = result1["__interrupt__"][0]
+        print(f"收到中断：{interrupt_info.value['query']}，请处理...")
+        # 步骤2: 人工审批恢复
+        human_input = "approve"  # 或 "reject"
+        final_result = app.invoke(
+            Command(resume=human_input),
+            config
+        )
+    else:
+        final_result = result1
+
+    print("\n=== 最终回复 ===")
+    for msg in final_result["messages"][-3:]:  # 显示最后3条消息
+        print(f"{type(msg).__name__}: {msg.content}")

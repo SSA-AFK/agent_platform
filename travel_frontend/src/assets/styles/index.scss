@@ -1,0 +1,68 @@
+/* INS 风格主题定制 */
+
+:root {
+  --el-color-primary: #8aafff; /* INS偏好轻柔低饱和蓝紫 */
+  --el-color-primary-light-3: #a8c4ff;
+  --el-color-primary-light-5: #c2d6ff;
+  --el-color-primary-light-7: #dbe7ff;
+  --el-color-primary-light-9: #f2f6ff;
+  
+  --el-border-radius-base: 12px;
+  --el-border-radius-small: 8px;
+  --el-border-radius-round: 24px;
+  
+  --el-border-color: #eaeaea;
+  --el-fill-color-light: #f7f8f9;
+  
+  --ins-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --ins-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --ins-bg: #fafafa;
+}
+
+body {
+  background-color: var(--ins-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 覆盖 Element Plus 按钮 */
+.el-button {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.el-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ins-shadow);
+}
+
+/* 覆盖 Element Plus 输入框 */
+.el-input__wrapper {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important;
+  transition: all 0.3s ease;
+}
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 2px var(--el-color-primary-light-5) !important;
+}
+
+/* 覆盖 Element Plus 卡片 */
+.el-card {
+  border: none !important;
+  box-shadow: var(--ins-shadow) !important;
+  border-radius: 20px !important;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,24 @@
+Java是一种广泛使用的高级编程语言，最初由Sun Microsystems于1995年发布（现为Oracle Corporation所有）。Java的设计目标是“一次编写，到处运行”（Write Once, Run Anywhere），这得益于其基于Java虚拟机（JVM）的跨平台特性。
+
+主要特点：
+1. 面向对象：Java是一种纯粹的面向对象编程语言，支持封装、继承和多态。
+2. 平台无关性：Java代码被编译成字节码，可以在任何安装了JVM的平台上运行。
+3. 自动内存管理：通过垃圾回收机制自动管理内存，减少内存泄漏风险。
+4. 安全性：内置安全特性，如字节数组边界检查、异常处理等。
+5. 多线程支持：原生支持多线程编程，便于开发并发应用程序。
+6. 丰富的标准库：提供大量内置API，涵盖网络、IO、集合、并发等领域。
+
+Java的应用领域非常广泛，包括：
+- 企业级应用开发（使用Spring、Hibernate等框架）
+- Android移动应用开发
+- Web应用程序开发
+- 大数据处理（Hadoop、Spark等）
+- 嵌入式系统
+- 科学计算和金融系统
+
+Java生态系统包含多个版本：
+- Java SE（Standard Edition）：标准版，用于桌面和服务器应用
+- Java EE（Enterprise Edition）：企业版，现称为Jakarta EE，用于大型分布式企业应用
+- Java ME（Micro Edition）：微型版，用于嵌入式设备和移动设备
+
+当前最新的长期支持（LTS）版本是Java 17和Java 21，它们提供了现代化的语言特性和性能改进。
