@@ -133,10 +133,22 @@ my_skill/
 
 当前计划引入：
 
-- `superpowers`：一组强调小步迭代、测试驱动、计划检查、代码审查的 Agent 工作流。已下载到本地 `my_skill/superpowers/`，但该目录自带内部 `.git`，首次提交暂未把它作为普通文件纳入仓库；后续可选择删除内部 `.git` 后提交普通文件，或正式改为 Git submodule。
+- `superpowers`：一组强调小步迭代、测试驱动、计划检查、代码审查的 Agent 工作流。已放在 `my_skill/superpowers/`，并通过 Git submodule 管理。
 - `project-workflows`：本项目专属工作流 skill，位于 `my_skill/project-workflows/SKILL.md`，用于指导团队修改后端、前端、Agent 工具和长期文档。
 
 注意：如果要让 Codex 自动识别某个 skill，通常需要安装到 Codex 的全局 skills 目录；放在 `my_skill/` 中主要用于团队共享和项目内版本管理。
+
+团队拉取包含 submodule 的项目时，建议使用：
+
+```powershell
+git clone --recurse-submodules https://github.com/SSA-AFK/agent_platform.git
+```
+
+如果已经克隆过项目，可在项目根目录执行：
+
+```powershell
+git submodule update --init --recursive
+```
 
 ## 8. 后续优化路线
 
@@ -166,3 +178,4 @@ my_skill/
 
 - 2026-05-23：创建文档初版；梳理项目结构、上传 GitHub 注意事项、skill 目录约定和后续优化路线。
 - 2026-05-23：新增 `my_skill/project-workflows/SKILL.md`；记录 `superpowers` 本地下载状态和后续入库选择。
+- 2026-05-23：将 `my_skill/superpowers` 明确为 Git submodule，并补充团队拉取方式。
